@@ -11,10 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const canvasCtx = canvasElement.getContext('2d');
 
   const cursorDot = document.createElement('img');
-  cursorDot.src = 'cursor.png';
+  cursorDot.src = 'data/cursor.png';
   cursorDot.style.position = 'fixed';
-  cursorDot.style.width = '100px';
-  cursorDot.style.height = '100px';
+  cursorDot.style.width = '80px';
+  cursorDot.style.height = '80px';
   cursorDot.style.pointerEvents = 'none';
   cursorDot.style.zIndex = '9999';
   cursorDot.style.display = 'none';
@@ -71,7 +71,8 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
       }
     } else if (el === currentHoverEl && hoverStartTime && !hoverCooldown) {
       const hoveredFor = Date.now() - hoverStartTime;
-      const HOVER_DELAY = 1000;
+      const HOVER_DELAY = 600;
+
       if (hoveredFor > HOVER_DELAY) {
         hoverStartTime = null;
         hoverCooldown = true;
@@ -80,9 +81,10 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
           startCountdownAndScreenshot(() => {
             hoverCooldown = false;
           });
-        } else if (el.classList.contains('selectable')) {
+        } 
+        else if (el.classList.contains('selectable')) {
           placeImage(el);
-          setTimeout(() => hoverCooldown = false, 800);
+          hoverCooldown = false;
         }
       }
     }
@@ -174,7 +176,7 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
       onFrame: async () => {
         await hands.send({ image: video });
 
-        if (Date.now() - lastHandSeenTime > 60000) {
+        if (Date.now() - lastHandSeenTime > 10000) {
           location.reload();
         }
       },
