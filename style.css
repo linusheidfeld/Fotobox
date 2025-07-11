@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'ABCDiatypeRounded';
-  src: url('data/ABCDiatypeRounded-Bold-Trial.otf') format('opentype');
+  src: url('ABCDiatypeRounded-Bold-Trial.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ABCDiatypeRounded-Black';
-  src: url('data/ABCDiatypeRounded-Black-Trial.otf') format('opentype');
+  src: url('ABCDiatypeRounded-Black-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ABCDiatypeRounded';
-  src: url('data/ABCDiatypeRounded-Regular-Trial.otf') format('opentype');
+  src: url('ABCDiatypeRounded-Regular-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ABCDiatypeRounded';
-  src: url('data/ABCDiatypeRounded-RegularItalic-Trial.otf') format('opentype');
+  src: url('ABCDiatypeRounded-RegularItalic-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
 }
