@@ -71,7 +71,7 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
       }
     } else if (el === currentHoverEl && hoverStartTime && !hoverCooldown) {
       const hoveredFor = Date.now() - hoverStartTime;
-      const HOVER_DELAY = 600;
+      const HOVER_DELAY = 900;
 
       if (hoveredFor > HOVER_DELAY) {
         hoverStartTime = null;
