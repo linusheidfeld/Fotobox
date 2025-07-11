@@ -175,7 +175,7 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
       onFrame: async () => {
         await hands.send({ image: video });
 
-        if (Date.now() - lastHandSeenTime > 10000) {
+        if (Date.now() - lastHandSeenTime > 60000) {
           location.reload();
         }
       },
