@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fotomat</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="box1">
+      <h1>Fotomat</h1>
+      <h2>Gestalte deine persönliche Postkarte vom Rundgang!</h2> 
+      <h3>So funktioniert’s:</h3>
+      <ol>
+        <li>Hand heben</li>
+        <li>Motiv wählen (1 Sek.)</li>
+        <li>Foto machen</li>
+      </ol>
+      <h4>Druckvorgang startet automatisch ...</h4>
+      <p>Ein Projekt von Carla Zanafredi, Linus Heidfeld, Merlin Schulz</p>
+    </div>
+    <div id="box2">
+      <button class="photo-button" onclick="startCountdownAndScreenshot()">Foto machen</button>
+    </div>
+    <div class="camera-wrapper">
+      <div id="box3">
+        <video id="camera" autoplay muted playsinline></video>
+      </div>
+      <div id="box4"><span class="blink-text">Ein Motiv wählen →</span></div>
+    </div>
+    <div id="box5">
+      <img src="data/grafik_1.jpg" alt="Grafik 1" class="responsive-image selectable" onclick="placeImage(this)" />
+    </div>
+    <div id="box6">
+      <img src="data/grafik_2.jpg" alt="Grafik 2" class="responsive-image selectable" onclick="placeImage(this)" />
+    </div>
+  </div>
+  <script src="script-hand-hover-simulation-final_2.js"></script>
+</body>
+</html>
