@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'ABCDiatypeRounded';
-  src: url('ABCDiatypeRounded-Bold-Trial.otf') format('opentype');
+  src: url('data/ABCDiatypeRounded-Bold-Trial.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ABCDiatypeRounded-Black';
-  src: url('ABCDiatypeRounded-Black-Trial.otf') format('opentype');
+  src: url('data/ABCDiatypeRounded-Black-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ABCDiatypeRounded';
-  src: url('ABCDiatypeRounded-Regular-Trial.otf') format('opentype');
+  src: url('data/ABCDiatypeRounded-Regular-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ABCDiatypeRounded';
-  src: url('ABCDiatypeRounded-RegularItalic-Trial.otf') format('opentype');
+  src: url('data/ABCDiatypeRounded-RegularItalic-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
 }
@@ -45,7 +45,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
-  font-size: 32px;
+  font-size: 1.2rem;
   font-weight: bold;
   background-color: #fff;
   color: black;
@@ -83,7 +83,6 @@ body {
   background-color: #ff5400;
   color: #000;
   font-family: 'ABCDiatypeRounded', sans-serif;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Optional: leichtes Schatten für Tiefe */
 }
 
 #box1 h1 {
@@ -91,19 +90,21 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 48px;
+  line-height: 1;
   margin: 0 0 0.5rem 0;
   color: #fff;
 }
 
 #box1 h2 {
-  font-size: 32px;
+  font-size: 36px;
+  line-height: 1.2;
   font-weight: normal;
   color: #fff;
   font-style: normal;
 }
 
 #box1 h3 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
   margin: 1rem 0 0.5rem 0;
   margin-bottom: 0.2rem;
@@ -111,9 +112,11 @@ body {
 }
 
 #box1 h4 {
-  font-size: 32px;
+  font-size: 36px;
+  line-height: 1.2;
   font-weight: normal;
   font-style: italic;
+  padding-top: 20px;
   margin: 1rem 0 0.5rem 0;
   margin-bottom: 0.2rem;
   color: #fff;
@@ -124,7 +127,7 @@ body {
   padding-left: 1.8em;
   margin: 0;
   color: #fff;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.5;
 }
 
@@ -135,7 +138,7 @@ p {
   font-style: normal;
   color: #ffbd9c;
   font-size: 18px;
-  padding-top: 470px;
+  padding-top: 425px;
 }
 
 #box2 {
