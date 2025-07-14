@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const canvasCtx = canvasElement.getContext('2d');
 
   const cursorDot = document.createElement('img');
-  cursorDot.src = 'data/cursor.png';
+  cursorDot.src = 'cursor.png';
   cursorDot.style.position = 'fixed';
   cursorDot.style.width = '100px';
   cursorDot.style.height = '100px';
@@ -128,9 +128,9 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
 
   // Wähle das passende Cursor-Bild
   if (handedness === "Left") {
-    cursorDot.src = 'data/cursor_left.png';
+    cursorDot.src = 'cursor_left.png';
   } else {
-    cursorDot.src = 'data/cursor_right.png';
+    cursorDot.src = 'cursor_right.png';
   }
 
   const indexTip = landmarks[8];
