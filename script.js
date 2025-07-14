@@ -235,7 +235,7 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
 
  window.takeScreenshot = function () {
   const wrapper = document.querySelector('.camera-wrapper');
-  const overlayImgPath = 'data/fehler.png';
+  const overlayImgPath = 'fehler.png';
 
   html2canvas(wrapper, {
     useCORS: true,
