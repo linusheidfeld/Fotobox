@@ -13,8 +13,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const cursorDot = document.createElement('img');
   cursorDot.src = 'data/cursor.png';
   cursorDot.style.position = 'fixed';
-  cursorDot.style.width = '80px';
-  cursorDot.style.height = '80px';
+  cursorDot.style.width = '100px';
+  cursorDot.style.height = '100px';
   cursorDot.style.pointerEvents = 'none';
   cursorDot.style.zIndex = '9999';
   cursorDot.style.display = 'none';
@@ -71,7 +71,7 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
       }
     } else if (el === currentHoverEl && hoverStartTime && !hoverCooldown) {
       const hoveredFor = Date.now() - hoverStartTime;
-      const HOVER_DELAY = 600;
+      const HOVER_DELAY = 1000;
 
       if (hoveredFor > HOVER_DELAY) {
         hoverStartTime = null;
@@ -81,10 +81,9 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
           startCountdownAndScreenshot(() => {
             hoverCooldown = false;
           });
-        } 
-        else if (el.classList.contains('selectable')) {
+        } else if (el.classList.contains('selectable')) {
           placeImage(el);
-          hoverCooldown = false;
+          setTimeout(() => hoverCooldown = false, 800);
         }
       }
     }
@@ -129,9 +128,9 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
 
   // Wähle das passende Cursor-Bild
   if (handedness === "Left") {
-    cursorDot.src = 'cursor_left.png';
+    cursorDot.src = 'data/cursor_left.png';
   } else {
-    cursorDot.src = 'cursor_right.png';
+    cursorDot.src = 'data/cursor_right.png';
   }
 
   const indexTip = landmarks[8];
@@ -176,10 +175,9 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
       onFrame: async () => {
         await hands.send({ image: video });
 
-        if (Date.now() - lastHandSeenTime > 60000) {
-  document.body.style.opacity = '0.2';
-  setTimeout(() => location.reload(), 1000);
-      }
+        if (Date.now() - lastHandSeenTime > 30000) {
+          location.reload();
+        }
       },
       width: 640,
       height: 480
@@ -237,7 +235,7 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
 
  window.takeScreenshot = function () {
   const wrapper = document.querySelector('.camera-wrapper');
-  const overlayImgPath = 'fehler.png';
+  const overlayImgPath = 'data/fehler.png';
 
   html2canvas(wrapper, {
     useCORS: true,
