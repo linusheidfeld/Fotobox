@@ -302,7 +302,7 @@ countdownOverlay.style.opacity = '0.8'; // z. B. 0.5 für 50 % Deckkraft
       const finalImg = a4Canvas.toDataURL('image/jpeg', 1.0);
       const link = document.createElement('a');
       link.href = finalImg;
-      link.download = 'fotomat_drucke_linus.jpg';
+      link.download = 'fotomat_drucke.jpg';
       link.click();
     };
 
