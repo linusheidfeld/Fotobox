@@ -112,14 +112,14 @@ body {
 }
 
 #box1 h4 {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   font-weight: normal;
   font-style: italic;
   padding-top: 20px;
   margin: 1rem 0 0.5rem 0;
   margin-bottom: 0.2rem;
-  color: #fff;
+  color: #ffbd9c;
 }
 
 #box1 ol {
